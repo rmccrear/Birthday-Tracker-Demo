@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Birthday Tracker</h1>
+    <h3>Sign up</h3>
+    <form action="index.html">
+        <label for="userName">Name:</label>
+        <input type="text" id="userName">
+        <br>
+        <label for="birthday">Birthday:</label>
+        <input type="text" name="birthday" id="birthday">
+        <br>
+        <label for="zipcode">Zip Code:</label>
+        <input type="text" id="zipcode">
+        <br>
+        <!-- Don't use submit or it will submit the form -->
+        <!-- <input type="submit" value="Save"> -->
+        <button type="button" id="saveButton">Save</button>
+    </form>
     <script src="script.js"></script>
 </body>
 </html>
