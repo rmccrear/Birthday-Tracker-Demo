@@ -5,7 +5,10 @@ let state = {
     zipCode: 0
 };
 
-console.log("hello world");
+// Proof of life
+// console.log("hello world");
+// let p3 = createPerson("Carol", "1-3-2017", "90210");
+// p3.status();
 
 let saveBtn = document.getElementById("saveButton");
 let nameInput = document.getElementById("userName");
@@ -26,6 +29,11 @@ function handleSave() {
   nameInput.value = "";
   birthdayInput.value = "";
   zipCodeInput.value = "";
+
+  // create person
+  let user = createPerson(state.name, state.birthday, state.zipCode);
+  user.status();
+  user.render();
 }
 saveBtn.addEventListener("click", handleSave);
 
