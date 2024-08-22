@@ -12,7 +12,18 @@ function createStudent(nameInput, ageInput, sugarInput) {
         this.age += 1;
       },
       status: function() {
-        console.log(`Name: ${this.name} Age: ${this.age} Can have Sugar: ${this.canHaveSugar}`)
+        return `Name: ${this.name} Age: ${this.age} Can have Sugar: ${this.canHaveSugar}`;
+      },
+      toHtml: function() {
+        return `
+            <div class="col">
+                <div class="card">
+                    <h4> ${this.name} </h4>
+                    <p> Age: ${this.age} </p>
+                    <p> Can have sugar: ${this.canHaveSugar} </p>
+                </div>
+            </div>
+        `;
       }
     }
     // Optional initialization
