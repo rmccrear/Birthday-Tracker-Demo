@@ -1,9 +1,9 @@
 // this is state
-let state = {
-    name: "",
-    birthday: "",
-    zipCode: 0
-};
+// let state = {
+//     name: "",
+//     birthday: "",
+//     zipCode: 0
+// };
 
 // Proof of life
 // console.log("hello world");
@@ -20,9 +20,13 @@ function handleSave() {
   let name = nameInput.value;
   state.name = name;
   console.log("Added name" + state.name);
-
   state.birthday = birthdayInput.value;
   state.zipCode = zipCodeInput.value;
+
+  // save in localStorage
+  localStorage.setItem("userName", name);
+  localStorage.setItem("userBirthday", state.birthday);
+  localStorage.setItem("zipCode", state.zipCode );
 
   console.log(state);
   // optionally reset this
@@ -39,3 +43,4 @@ saveBtn.addEventListener("click", handleSave);
 
 // old way...
 // saveButton.onclick = handleSave;
+
