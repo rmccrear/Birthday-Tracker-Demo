@@ -14,14 +14,18 @@ function createStudent(nameInput, ageInput, sugarInput) {
       status: function() {
         console.log(`Name: ${this.name} Age: ${this.age} Can have Sugar: ${this.canHaveSugar}`)
       },
+      // Step 1: (Day 4)
       toHTML: function () {
         return `
-            <div class="col-4">
-              <div class="card">
-                <h4>${this.name}</h4>
-                <p>age:<em> ${this.age} </em></p>
-                <p>can have sugar: ${this.canHaveSugar}</p>
-              </div>
+            <div class="col-md-4">
+            <div class="card">
+                Name: ${this.name}
+                <button type="button" class="btn btn-primary">
+                    Age: <span class="badge text-bg-secondary">${this.age}</span>
+                </button>
+                can have sugar: ${this.canHaveSugar}
+                <button id="play-${this.name}">Play</button>
+            </div>
             </div>
         `
       }

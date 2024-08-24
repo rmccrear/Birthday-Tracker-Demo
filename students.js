@@ -18,19 +18,22 @@ function handleSave(){
     let canHaveSugar = canHaveSugarInput.checked;
     console.log(name)
     let student = createStudent(name, age, canHaveSugar);
-    console.log(student);
+    console.log(student.toHTML());
     state.students.push(student);
     render();
 }
 
 function render() {
+    // Step 2 Day 4: aggregate all the html
     let html = "";
-    let output = document.getElementById("studentOutput");
     for(let i=0; i<state.students.length; i++){
         // html += state.students[i].name + " " +  state.students[i].age;
         // html += ", "
         html += state.students[i].toHTML();
+        console.log(html);
     }
+    // Step 3 Day 4: put the html into the DOM
+    let output = document.getElementById("studentOutput");
     output.innerHTML = html;
 }
 
