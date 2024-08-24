@@ -3,7 +3,7 @@ console.log("HELLO FROM STUDENTS");
 let s1 = createStudent("Bob", 18, true);
 s1.haveABirthday();
 
-// let state = {};
+let state = {};
 state.students = [];
 
 let addButton = document.getElementById("saveButton");

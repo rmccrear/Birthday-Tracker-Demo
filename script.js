@@ -1,9 +1,9 @@
 // this is state
-// let state = {
-//     name: "",
-//     birthday: "",
-//     zipCode: 0
-// };
+let state = {
+    name: "",
+    birthday: "",
+    zipCode: 0
+};
 
 // Proof of life
 // console.log("hello world");
@@ -44,3 +44,17 @@ saveBtn.addEventListener("click", handleSave);
 // old way...
 // saveButton.onclick = handleSave;
 
+let userName = localStorage.getItem("userName");
+console.log(userName);
+let bday = localStorage.getItem("userBirthday");
+console.log(bday)
+let zip = localStorage.getItem("zipCode")
+console.log(zip);
+
+state.name = userName;
+state.birthday = bday;
+state.zipCode = zip;
+
+let user = createPerson(state.name, state.birthday, state.zipCode);
+user.status();
+user.render();
